@@ -7,6 +7,7 @@ module.exports = (
   const bidsObject = persistence["bids"];
   const petsObject = persistence["pets"];
 
+  //adds bid for a specific pet, if the user already made a bid, then it is overwritten.
   const addBid = async (name, petId, amount) => {
     const bidItem = { name, amount };
     if (bidsObject[petId]) {
